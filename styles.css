@@ -1,0 +1,80 @@
+.workspace-leaf-content[data-type="compressed-markdown-view"] {
+    .markdown-source-view .cm-content {
+        pointer-events: none !important;
+        user-select: text !important;
+        -webkit-user-select: text !important;
+        -moz-user-select: text !important;
+        -ms-user-select: text !important;
+    }
+
+    .markdown-preview-view,
+    .markdown-preview-view * {
+        pointer-events: auto !important;
+        user-select: text !important;
+        -webkit-user-select: text !important;
+    }
+
+    .inline-title,
+    .metadata-container,
+    .metadata-content {
+        pointer-events: none !important;
+    }
+}
+
+.workspace-leaf-content[data-type="compressed-markdown-view"]
+    .view-actions
+    .view-action[aria-label*="Current view"],
+.workspace-leaf-content[data-type="compressed-markdown-view"]
+    .view-actions
+    .view-action
+    svg.lucide-book-open,
+.workspace-leaf-content[data-type="compressed-markdown-view"]
+    .view-actions
+    .view-action
+    svg.lucide-pencil {
+    display: none !important;
+}
+
+.workspace-leaf-content[data-type="compressed-markdown-view"] .view-actions {
+    position: relative;
+    pointer-events: auto !important;
+}
+
+.workspace-leaf-content[data-type="compressed-markdown-view"]
+    .view-actions::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 4px;
+    background-color: var(--text-muted);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M7 11V7a5 5 0 0110 0v4'%3E%3C/path%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M7 11V7a5 5 0 0110 0v4'%3E%3C/path%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    cursor: not-allowed;
+    pointer-events: auto !important;
+}
+
+.workspace-leaf-content[data-type="compressed-markdown-view"]
+    .view-actions:hover::before::after {
+    content: "File .mdz read-only (tidak bisa diedit)";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.workspace-leaf-content[data-type="compressed-markdown-view"]
+    .markdown-source-view {
+    opacity: 0.92;
+}

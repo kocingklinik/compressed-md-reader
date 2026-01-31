@@ -1,0 +1,10 @@
+{
+  "id": "compressed-md-reader",
+  "name": "Compressed Markdown Reader",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Read compressed markdown files (.mdz) to save storage space. Files are gzip compressed and read-only.",
+  "author": "kocingklinik",
+  "authorUrl": "https://github.com/kocingklinik",
+  "isDesktopOnly": false
+}
